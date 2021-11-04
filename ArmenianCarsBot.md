@@ -387,6 +387,7 @@ def callback_worker(call):
         keyboard.add(key_ford)
         key_ford = types.InlineKeyboardButton(text='Transit 🪵', callback_data='32')
         keyboard.add(key_ford)
+        bot.send_message(call.from_user.id, text='Выбери модель!', reply_markup=keyboard)
 
     if call.data == 'honda':
         keyboard = types.InlineKeyboardMarkup()
@@ -488,13 +489,14 @@ def callback_worker(call):
         keyboard.add(key_toyota)
         bot.send_message(call.from_user.id, text='Выбери модель!', reply_markup=keyboard)
 
-    if call.data == 'Chevrolet':
+    if call.data == 'chevrolete':
         keyboard = types.InlineKeyboardMarkup()
-        key_ferrari = types.InlineKeyboardButton(text='Volt 💸', callback_data='71')
-        keyboard.add(key_ferrari)
-        key_ferrari = types.InlineKeyboardButton(text='Camaro 💸', callback_data='72')
-        keyboard.add(key_ferrari)
+        key_chevrolete = types.InlineKeyboardButton(text='Volt 💸', callback_data='71')
+        keyboard.add(key_chevrolete)
+        key_chevrolete = types.InlineKeyboardButton(text='Camaro 💸', callback_data='72')
+        keyboard.add(key_chevrolete)
         bot.send_message(call.from_user.id, text='Выбери модель!', reply_markup=keyboard)
+
 
     if call.data == 'ferrari':
         keyboard = types.InlineKeyboardMarkup()
@@ -502,7 +504,7 @@ def callback_worker(call):
         keyboard.add(key_ferrari)
         bot.send_message(call.from_user.id, text='Выбери модель!', reply_markup=keyboard)
 
-    if call.data == 'rr':
+    if call.data == 'rollsroyce':
         keyboard = types.InlineKeyboardMarkup()
         key_rollsroyce = types.InlineKeyboardButton(text='Rolls Royce 💰', callback_data='74')
         keyboard.add(key_rollsroyce)
@@ -520,21 +522,17 @@ def callback_worker(call):
         keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda 3', callback_data='77')
         keyboard.add(key_mazda)
-        keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda 6', callback_data='78')
         keyboard.add(key_mazda)
-        keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda CX3', callback_data='79')
         keyboard.add(key_mazda)
-        keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda CX5', callback_data='80')
         keyboard.add(key_mazda)
-        keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda CX7', callback_data='81')
         keyboard.add(key_mazda)
-        keyboard = types.InlineKeyboardMarkup()
         key_mazda = types.InlineKeyboardButton(text='Mazda CX9', callback_data='82')
         keyboard.add(key_mazda)
+        bot.send_message(call.from_user.id, text='Выбери модель!', reply_markup=keyboard)
 
 
 bot.infinity_polling()
